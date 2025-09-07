@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#home" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#home" class="logo">Von's Portfolio</a>
+        <button class="nav__toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav__links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="home" class="container hero">
+      <div class="hero__media">
+        <img src="images/Von.jpg" alt="Portrait of Name" loading="lazy" />
+      </div>
+      <div class="hero__content">
+        <h1>Hi, I’m <span class="accent">Bonifacio Allego</span></h1>
+        <p>I’m a computer science student at Caraga state university.</p>
+        <a href="#projects" class="btn">View my work</a>
+      </div>
+    </main>
+
+    <section id="about" class="container section">
+      <h2 class="section__title">About Me</h2>
+      <p>
+        I’m a Computer Science student currently pursuing my Bachelor’s degree. I have a strong interest in programming, problem-solving, and learning about how technology can be used to solve real-world problems. I enjoy working on small projects to apply what I learn in class, and I'm continuously exploring new tools and technologies. I'm passionate about improving my skills and excited to grow in the field of tech.
+      </p>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2 class="section__title">Projects</h2>
+      <div class="projects">
+        <article class="card">
+          <div class="card__media" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title">Simple Calculator using Python</h3>
+            <p class="card__text">A basic calculator application created using Python that can perform simple arithmetic operations like addition, subtraction, multiplication, and division.</p>
+            <div class="card__actions">
+              <a class="link" href="#" target="_blank" rel="noreferrer noopener">Live</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer noopener">Code</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title">Personal Portfolio Website</h3>
+            <p class="card__text">A simple static website that displays my introduction, skills, and contact information. This project helped me understand the basics of web development.</p>
+            <div class="card__actions">
+              <a class="link" href="#" target="_blank" rel="noreferrer noopener">Live</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer noopener">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container section">
+      <h2 class="section__title">Skills</h2>
+      <ul class="skills">
+        <li>Basic knowledge of Python and C/C++</li>
+        <li>HTML & CSS</li>
+        <li>Basic understanding of programming logic and algorithms</li>
+        <li>Familiar with using Git and GitHub</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2 class="section__title">Contact</h2>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a class="link" href="mailto:you@example.com">bonifacio.allego@carsu.edu.ph</a></li>
+        <li><strong>Phone:</strong> <a class="link" href="tel:+1234567890">+63 930 062 0680</a></li>
+        <li><strong>Location:</strong> Agusan del sur, Philippines</li>
+        <li><strong>Social:</strong>
+          <a class="link" href="#" target="_blank" rel="noreferrer noopener">GitHub</a> ·
+          <a class="link" href="#" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+        </li>
+      </ul>
+
+      <form class="contact-form" action="mailto:you@example.com" method="post" enctype="text/plain">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="How can I help?" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Bonifacio Allego. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script>
+      // Small enhancement: mobile nav toggle and year
+      document.querySelector('.nav__toggle').addEventListener('click', function () {
+        document.querySelector('.nav').classList.toggle('open');
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+
